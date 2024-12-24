@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecteur Vidéo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="video-list">
+      <h2>Liste des vidéos</h2>
+      <ul id="videoList">
+        <li>
+          <input type="checkbox" id="video1"> 
+          <button class="video-button" onclick="loadVideo(0)">Vidéo 1</button>
+        </li>
+        <li>
+          <input type="checkbox" id="video2"> 
+          <button class="video-button" onclick="loadVideo(1)">Vidéo 2</button>
+        </li>
+        <li>
+          <input type="checkbox" id="video3"> 
+          <button class="video-button" onclick="loadVideo(2)">Vidéo 3</button>
+        </li>
+        <li>
+          <input type="checkbox" id="video4"> 
+          <button class="video-button" onclick="loadVideo(3)">Vidéo 4</button>
+        </li>
+        <li>
+          <input type="checkbox" id="video5"> 
+          <button class="video-button" onclick="loadVideo(4)">Vidéo 5</button>
+        </li>
+      </ul>
+    </div>
+    <div class="video-player">
+      <h2>Lecteur Vidéo</h2>
+      <video id="videoElement" width="600" controls>
+        <source id="videoSource" src="###1" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+      </video>
+      <textarea id="notes" placeholder="Ajoutez vos notes ici..."></textarea>
+      <div class="navigation-buttons">
+        <button onclick="previousVideo()">Précédent</button>
+        <button onclick="nextVideo()">Suivant</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
